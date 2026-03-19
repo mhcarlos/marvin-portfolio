@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --accent: #1A6B5C;
+    --accent-light: #E1F5EE;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-neutral-900 bg-white antialiased;
+  }
+}
+
+@layer components {
+  .tag {
+    @apply text-xs px-3 py-1 rounded-full bg-neutral-100 border border-neutral-200 text-neutral-500 font-normal tracking-wide;
+  }
+  .tag-accent {
+    @apply text-xs px-3 py-1 rounded-full border-0 font-normal tracking-wide;
+    background: var(--accent-light);
+    color: var(--accent);
+  }
+  .pill {
+    @apply text-xs px-2.5 py-0.5 rounded-full bg-neutral-100 border border-neutral-200 text-neutral-400;
+  }
+  .section-rule {
+    @apply border-t border-neutral-200 pt-8 mt-12;
+  }
+  .nav-link {
+    @apply text-xs text-neutral-400 hover:text-neutral-900 tracking-widest uppercase transition-colors duration-200 cursor-pointer;
+  }
+  .contact-link {
+    @apply text-sm text-neutral-500 hover:text-neutral-900 border-b border-neutral-300 hover:border-neutral-900 pb-px transition-all duration-200 cursor-pointer;
+  }
+}
