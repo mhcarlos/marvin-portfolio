@@ -20,18 +20,18 @@ const About = forwardRef(function About(_, ref) {
   return (
     <section ref={ref} id="about">
       <div className="section-rule flex items-baseline gap-4 mb-6">
-        <span className="text-xs tracking-widest uppercase text-neutral-400">About</span>
+        <span className="text-xs tracking-widest uppercase text-neutral-700">About</span>
       </div>
 
       <motion.div
-        className="grid grid-cols-2 gap-12 pb-4"
+        className="grid grid-cols-2 gap-16 pb-4"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.4 }}
       >
         {/* Bio */}
-        <div className="text-sm text-neutral-500 leading-relaxed font-light space-y-4">
+        <div className="text-sm text-neutral-700 leading-relaxed font-light space-y-4">
           <p>
             Designing experiences that blend{' '}
             <strong className="text-neutral-900 font-medium">
@@ -65,7 +65,7 @@ const About = forwardRef(function About(_, ref) {
         <div className="flex flex-col gap-5">
           {skills.map(group => (
             <div key={group.label}>
-              <h4 className="text-xs tracking-widest uppercase text-neutral-400 mb-2">
+              <h4 className="text-xs tracking-widest uppercase text-neutral-700 mb-2">
                 {group.label}
               </h4>
               <div className="flex flex-wrap gap-1.5">
