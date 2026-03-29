@@ -9,6 +9,7 @@
   }
 
   html {
+    font-size: 16px;
     scroll-behavior: smooth;
   }
 
@@ -19,23 +20,26 @@
 
 @layer components {
   .tag {
-    @apply text-xs px-3 py-1 rounded-full bg-neutral-100 border border-neutral-200 text-neutral-500 font-normal tracking-wide;
+    @apply px-3 py-1 rounded-full bg-neutral-100 border border-neutral-200 text-neutral-800 font-normal tracking-wide;
+    font-size: 11px;
   }
   .tag-accent {
-    @apply text-xs px-3 py-1 rounded-full border-0 font-normal tracking-wide;
+    @apply px-3 py-1 rounded-full border-0 font-normal tracking-wide;
+    font-size: 11px;
     background: var(--accent-light);
     color: var(--accent);
   }
   .pill {
-    @apply text-xs px-2.5 py-0.5 rounded-full bg-neutral-100 border border-neutral-200 text-neutral-400;
+    @apply text-xs px-2.5 py-0.5 rounded-full bg-neutral-100 border border-neutral-200 text-neutral-800;
   }
   .section-rule {
-    @apply border-t border-neutral-200 pt-8 mt-12;
+    @apply border-t border-neutral-200 pt-10 mt-10;
   }
   .nav-link {
-    @apply text-xs text-neutral-400 hover:text-neutral-900 tracking-widest uppercase transition-colors duration-200 cursor-pointer;
+    font-size: 11px;
+    @apply text-neutral-600 hover:text-neutral-900 tracking-widest uppercase transition-colors duration-200 cursor-pointer;
   }
   .contact-link {
-    @apply text-sm text-neutral-500 hover:text-neutral-900 border-b border-neutral-300 hover:border-neutral-900 pb-px transition-all duration-200 cursor-pointer;
+    @apply text-sm text-neutral-800 hover:text-neutral-900 border-b border-neutral-400 hover:border-neutral-900 pb-px transition-all duration-200 cursor-pointer;
   }
 }
