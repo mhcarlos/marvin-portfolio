@@ -24,17 +24,12 @@ export default function CaseStudy() {
     <div className="max-w-5xl mx-auto px-10">
       {/* Nav */}
       <nav className="flex justify-between items-center py-8 border-b border-neutral-200 mb-12">
-        <Link to="/" className="cursor-pointer">
-          <img
-            src={`${import.meta.env.BASE_URL}assets/images/mc-logo.png`}
-            alt="Marvin Carlos"
-            style={{ height: '32px', width: 'auto' }}
-            onError={(e) => {
-              e.target.style.display = 'none'
-              e.target.nextSibling.style.display = 'inline'
-            }}
-          />
-          <span className="font-display text-xl text-neutral-900 tracking-tight" style={{ display: 'none' }}>
+        <Link to="/" className="flex items-center gap-3">
+          <svg width="32" height="32" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="32" cy="32" r="32" fill="#171717" />
+            <text x="32" y="41" fontFamily="DM Serif Display, serif" fontSize="26" fontWeight="400" fill="white" textAnchor="middle" letterSpacing="-1">MC</text>
+          </svg>
+          <span style={{ fontFamily: '"DM Serif Display", serif' }} className="text-xl text-neutral-900 tracking-tight leading-none">
             Marvin Carlos
           </span>
         </Link>
