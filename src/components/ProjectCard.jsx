@@ -9,14 +9,8 @@ export function assetUrl(filename) {
   return ASSET_BASE + folder + filename
 }
 
-function thumbnail(project) {
-  if (project.images?.length) return assetUrl(project.images[0])
-  if (project.gifs?.length) return assetUrl(project.gifs[0])
-  return null
-}
-
 export default function ProjectCard({ project }) {
-  const thumb = thumbnail(project)
+  const thumb = project.thumbnail ? assetUrl(project.thumbnail) : null
 
   return (
     <motion.div
@@ -27,7 +21,7 @@ export default function ProjectCard({ project }) {
     >
       <Link to={`/project/${project.id}`} className="block group">
         {/* Thumbnail */}
-        <div className="w-full aspect-[4/3] bg-neutral-100 rounded-lg overflow-hidden mb-4">
+        <div className="w-full bg-neutral-100 rounded-lg overflow-hidden mb-4" style={{ aspectRatio: '16/9' }}>
           {thumb ? (
             <img
               src={thumb}
@@ -49,8 +43,8 @@ export default function ProjectCard({ project }) {
 
         {/* Meta */}
         <div className="flex items-center gap-3 mb-1.5">
-          <span className="text-xs tracking-widest uppercase text-neutral-700">{project.client}</span>
-          <span className="text-xs text-neutral-600">{project.year}</span>
+          <span className="text-[11px] tracking-widest uppercase text-neutral-400">{project.client}</span>
+          <span className="text-[11px] text-neutral-400">{project.year}</span>
         </div>
 
         {/* Title */}

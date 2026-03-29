@@ -12,6 +12,7 @@ export const projects = [
     description:
       'Leading UX and product design for Insight Partners\' internal platforms — evolving design systems and integrating AI-driven features into company sourcing, analysis, and portfolio management workflows.',
     pills: ['Design Leadership', 'Design Systems', 'AI Features', 'Internal Platforms', 'VC/PE'],
+    thumbnail: null,
     images: [],
     gifs: [],
     overview:
@@ -31,7 +32,8 @@ export const projects = [
     description:
       'A series of form and spreadsheet enhancements — conceived, designed, and developed with my product-design-development triad — deployed across the entire QuickBooks Online ecosystem. Centerpiece: Central Copy, a richer copying experience long requested by power users.',
     pills: ['QBO Ecosystem', 'Interaction Design', 'Power Users', 'Agile'],
-    images: ['qb-forms-d4d.png'],
+    thumbnail: 'thumb-intuit-forms.webp',
+    images: [],
     gifs: ['central-copy.gif', 'copy-rows-to-new-bill.gif'],
     overview:
       'Forms++ is a collection of quality-of-life improvements for form and spreadsheet handling conceived by me and my triad. The project demonstrates how Intuit product teams listen to customers — starting with user needs and feedback, then designing solutions that scale across the full QBO ecosystem.',
@@ -49,7 +51,8 @@ export const projects = [
     description:
       'End-to-end design of Intuit\'s first foray into serving manufacturing clients — a light MRP application integrated into QuickBooks, targeting mid-market and emerging mid-market businesses in the U.S.',
     pills: ['End-to-End Design', 'MRP / Manufacturing', 'Mid-Market', 'Research to Delivery'],
-    images: ['qb-ma-screenshot.png'],
+    thumbnail: 'thumb-intuit-manufacturing.webp',
+    images: [],
     gifs: ['qb-ma-01.gif', 'qb-ma-05-competitors.gif'],
     overview:
       'Intuit\'s goal was to target mid-market and emerging mid-market manufacturing businesses in the U.S. — while also better supporting existing manufacturing customers — by creating a light Materials Requirements Planning (MRP) application integrated into existing QuickBooks features.',
@@ -67,6 +70,7 @@ export const projects = [
     description:
       'Led the global UX/UI redesign and rebranding of Morgan Stanley\'s digital brand — building a new team, switching from Sketch to Figma mid-project, and creating the R4 Design System that remains in production use today. MarCom Award winner.',
     pills: ['Global Rebrand', 'Design System (R4)', 'WCAG / ADA Compliance', 'Design Leadership', 'MarCom Award'],
+    thumbnail: 'thumb-morgan-stanley-r4.webp',
     images: ['ms-r4-01.png', 'ms-r4-02.png'],
     gifs: [],
     overview:
@@ -86,6 +90,7 @@ export const projects = [
     description:
       'Took over as UX/Product Design Lead 6 months into a major enterprise modernization — transforming a 15-year-old legacy reconciliation product under Agile XP, taking conversion intent from 0% to ~80%.',
     pills: ['Enterprise Modernization', 'Agile XP', 'Legacy-to-Modern', 'Revenue-Critical'],
+    thumbnail: 'thumb-amex-cover.webp',
     images: ['amex-recon-01.png', 'amex-recon-02.png'],
     gifs: [],
     overview:
@@ -104,6 +109,7 @@ export const projects = [
     description:
       'Led ideation to bring an existing enterprise analytics product into its 2.0 phase — designing the Events feature that uses AI/ML to assess real-time impact of world events on spending trends, including a client demo prototype.',
     pills: ['AI/ML Product Design', 'Enterprise Analytics', 'Ideation Leadership', 'Client Demo'],
+    thumbnail: 'thumb-mastercard.webp',
     images: ['mastercard-sp-01.jpg', 'mastercard-sp-02.jpg', 'mastercard-sp-03.jpg'],
     gifs: [],
     overview:
@@ -122,6 +128,7 @@ export const projects = [
     description:
       'MVP design for a data pipeline monitoring dashboard for Data Engineers and Architects — communicating critical pipeline health metrics with scenarios, visualizations, and detailed interaction specifications.',
     pills: ['Data Pipelines', 'ELT/ETL', 'Dashboard Design', 'User Interviews', 'AI-Assisted'],
+    thumbnail: 'thumb-dash-elt-cover.webp',
     images: ['elt-dashboard-01.png', 'elt-dashboard-02.png', 'elt-dashboard-03.png'],
     gifs: [],
     overview:

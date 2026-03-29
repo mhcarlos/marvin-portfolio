@@ -18,8 +18,7 @@ export default function CaseStudy() {
 
   const allImages = project.images || []
   const allGifs = project.gifs || []
-  const heroSrc = allImages[0] ? assetUrl(allImages[0]) : allGifs[0] ? assetUrl(allGifs[0]) : null
-  const remainingImages = allImages.slice(1)
+  const mediaStrip = [...allImages, ...allGifs]
 
   return (
     <div className="max-w-5xl mx-auto px-10">
@@ -50,8 +49,8 @@ export default function CaseStudy() {
         {/* Header */}
         <div className="mb-10">
           <div className="flex items-center gap-4 mb-4">
-            <span className="text-xs tracking-widest uppercase text-neutral-700">{project.client}</span>
-            <span className="text-xs text-neutral-600">{project.year}</span>
+            <span className="tracking-widest uppercase text-neutral-400" style={{ fontSize: '11px' }}>{project.client}</span>
+            <span className="text-neutral-400" style={{ fontSize: '11px' }}>{project.year}</span>
             <span
               className="text-xs px-2.5 py-0.5 rounded-full font-normal"
               style={{ background: 'var(--accent-light)', color: 'var(--accent)' }}
@@ -77,26 +76,15 @@ export default function CaseStudy() {
           )}
         </div>
 
-        {/* Hero image */}
-        {heroSrc && (
-          <div className="w-full rounded-xl overflow-hidden mb-10 bg-neutral-100">
-            <img
-              src={heroSrc}
-              alt={project.title}
-              className="w-full h-auto object-cover"
-            />
-          </div>
-        )}
-
         {/* Overview + Outcomes */}
         <div className="grid grid-cols-2 gap-12 mb-12">
           <div>
-            <h3 className="text-xs tracking-widest uppercase text-neutral-700 mb-3">Overview</h3>
+            <h3 className="tracking-widest uppercase text-neutral-400 mb-3" style={{ fontSize: '11px' }}>Overview</h3>
             <p className="text-sm text-neutral-700 leading-relaxed font-light">{project.overview}</p>
           </div>
           {project.outcomes?.length > 0 && (
             <div>
-              <h3 className="text-xs tracking-widest uppercase text-neutral-700 mb-3">
+              <h3 className="tracking-widest uppercase text-neutral-400 mb-3" style={{ fontSize: '11px' }}>
                 {project.outcomeLabel || 'Outcomes'}
               </h3>
               <div className="flex flex-col gap-4">
@@ -113,31 +101,19 @@ export default function CaseStudy() {
           )}
         </div>
 
-        {/* GIFs — full width */}
-        {allGifs.length > 0 && (
-          <div className="flex flex-col gap-6 mb-10">
-            {allGifs.map(filename => (
-              <div key={filename} className="w-full rounded-xl overflow-hidden bg-neutral-100">
+        {/* Media strip — horizontal scroll */}
+        {mediaStrip.length > 0 && (
+          <div className="flex gap-4 overflow-x-auto pb-4 mb-12" style={{ scrollSnapType: 'x mandatory' }}>
+            {mediaStrip.map(filename => (
+              <div
+                key={filename}
+                className="flex-shrink-0 rounded-xl overflow-hidden bg-neutral-100"
+                style={{ height: '320px', scrollSnapAlign: 'start' }}
+              >
                 <img
                   src={assetUrl(filename)}
                   alt={filename.replace(/[-_.]/g, ' ').replace(/\.[^.]+$/, '')}
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        )}
-
-        {/* Remaining images — 2-column grid */}
-        {remainingImages.length > 0 && (
-          <div className="grid grid-cols-2 gap-4 mb-12">
-            {remainingImages.map(filename => (
-              <div key={filename} className="rounded-xl overflow-hidden bg-neutral-100">
-                <img
-                  src={assetUrl(filename)}
-                  alt={filename.replace(/[-_.]/g, ' ').replace(/\.[^.]+$/, '')}
-                  className="w-full h-auto object-cover"
+                  className="h-full w-auto object-cover"
                   loading="lazy"
                 />
               </div>
