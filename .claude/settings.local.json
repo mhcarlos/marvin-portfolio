@@ -4,7 +4,9 @@
       "Bash(sudo chown:*)",
       "Bash(npm install:*)",
       "Bash(npm run:*)",
-      "Bash(gh auth:*)"
+      "Bash(gh auth:*)",
+      "Bash(ls /Users/marvin/projects/marvin-portfolio/.claude/worktrees/lucid-lamport/public/assets/images/thumb*)",
+      "Bash(ls /Users/marvin/projects/marvin-portfolio/.claude/worktrees/lucid-lamport/dist/assets/images/thumb*)"
     ]
   }
 }

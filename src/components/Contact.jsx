@@ -19,7 +19,7 @@ const Contact = forwardRef(function Contact(_, ref) {
         <div className="flex gap-6 flex-shrink-0">
           <a href="mailto:hello@marvincarlos.com" className="contact-link">Email</a>
           <a href="https://linkedin.com/in/marvincarlos" target="_blank" rel="noreferrer" className="contact-link">LinkedIn</a>
-          <a href="/resume.pdf" target="_blank" className="contact-link">Résumé</a>
+          <a href={`${import.meta.env.BASE_URL}assets/Marvin-Carlos_Lead-Product-Designer.pdf`} target="_blank" rel="noreferrer" className="contact-link">Résumé</a>
         </div>
       </motion.div>
     </section>

@@ -20,8 +20,8 @@ export default function Hero({ onWork }) {
         <em className="not-italic" style={{ color: 'var(--accent)' }}>technical precision</em>
       </h1>
 
-      <p className="text-base text-neutral-700 max-w-xl leading-relaxed font-light mb-8">
-        I've shipped AI features, design systems, and enterprise products used by millions — at Insight Partners, Intuit, Morgan Stanley, American Express, and Mastercard. CPACC-certified. Open to new opportunities.
+      <p className="text-lg text-neutral-700 max-w-xl leading-relaxed font-light mb-8">
+        I've shipped AI features and enterprise products for financial institutions, small business owners, and enterprise operators — at Insight Partners, Intuit, Morgan Stanley, American Express, and Mastercard. CPACC-certified.
       </p>
 
       <div className="flex flex-wrap gap-2">
