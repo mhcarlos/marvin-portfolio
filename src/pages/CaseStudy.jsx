@@ -101,6 +101,23 @@ export default function CaseStudy() {
           )}
         </div>
 
+        {/* Body sections */}
+        {project.sections?.length > 0 && (
+          <div className="flex flex-col gap-10 mb-12">
+            {project.sections.map((section, i) => (
+              <div key={i} className="grid grid-cols-[1fr_2fr] gap-12">
+                <div>
+                  <span className="tracking-widest uppercase text-neutral-400" style={{ fontSize: '11px' }}>
+                    {String(i + 1).padStart(2, '0')}
+                  </span>
+                  <h3 className="font-display text-lg text-neutral-900 leading-snug mt-1">{section.title}</h3>
+                </div>
+                <p className="text-sm text-neutral-700 leading-relaxed font-light">{section.body}</p>
+              </div>
+            ))}
+          </div>
+        )}
+
         {/* Media strip — horizontal scroll */}
         {mediaStrip.length > 0 && (
           <div className="flex gap-4 overflow-x-auto pb-4 mb-12" style={{ scrollSnapType: 'x mandatory' }}>

@@ -21,7 +21,7 @@ export default function ProjectCard({ project }) {
     >
       <Link to={`/project/${project.id}`} className="block group">
         {/* Thumbnail */}
-        <div className="w-full bg-neutral-100 rounded-lg overflow-hidden mb-4" style={{ aspectRatio: '16/9' }}>
+        <div className="w-full bg-neutral-100 rounded-lg overflow-hidden mb-4" style={{ aspectRatio: '1/1' }}>
           {thumb ? (
             <img
               src={thumb}
