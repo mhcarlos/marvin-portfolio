@@ -13,6 +13,7 @@ export const projects = [
       'Leading UX and product design for Insight Partners\' internal platforms — evolving design systems and integrating AI-driven features into company sourcing, analysis, and portfolio management workflows.',
     pills: ['Design Leadership', 'Design Systems', 'AI Features', 'Internal Platforms', 'VC/PE'],
     thumbnail: null,
+    metric: '4× feature adoption · 3× user satisfaction · 60% faster engineering implementation',
     images: [],
     gifs: [],
     overview:
@@ -34,6 +35,7 @@ export const projects = [
       'A series of form and spreadsheet enhancements — conceived, designed, and developed with my product-design-development triad — deployed across the entire QuickBooks Online ecosystem. Centerpiece: Central Copy, a richer copying experience long requested by power users.',
     pills: ['QBO Ecosystem', 'Interaction Design', 'Power Users', 'Agile'],
     thumbnail: 'thumb-intuit-forms.webp',
+    metric: 'Shipped to 100% of QBO users · Praised by accounting professionals and power users',
     images: [],
     gifs: ['central-copy.gif', 'copy-rows-to-new-bill.gif'],
     overview:
@@ -76,6 +78,7 @@ export const projects = [
       'End-to-end design of Intuit\'s first foray into serving manufacturing clients — a light MRP application integrated into QuickBooks, targeting mid-market and emerging mid-market businesses in the U.S.',
     pills: ['End-to-End Design', 'MRP / Manufacturing', 'Mid-Market', 'Research to Delivery'],
     thumbnail: 'thumb-intuit-manufacturing.webp',
+    metric: '7pt reduction in customer attrition YoY · Concept to MVP launch',
     images: [],
     gifs: ['qb-ma-01.gif', 'qb-ma-05-competitors.gif'],
     overview:
@@ -119,6 +122,7 @@ export const projects = [
       'Led the global UX/UI redesign and rebranding of Morgan Stanley\'s digital brand — building a new team, switching from Sketch to Figma mid-project, and creating the R4 Design System that remains in production use today. MarCom Award winner.',
     pills: ['Global Rebrand', 'Design System (R4)', 'WCAG / ADA Compliance', 'Design Leadership', 'MarCom Award'],
     thumbnail: 'thumb-morgan-stanley-r4.webp',
+    metric: '20% YoY engagement growth · 5× WCAG compliance improvement · MarCom Award',
     images: ['ms-r4-01.png', 'ms-r4-02.png'],
     gifs: [],
     overview:
@@ -162,6 +166,7 @@ export const projects = [
       'Took over as UX/Product Design Lead 6 months into a major enterprise modernization — transforming a 15-year-old legacy reconciliation product under Agile XP, taking conversion intent from 0% to ~80%.',
     pills: ['Enterprise Modernization', 'Agile XP', 'Legacy-to-Modern', 'Revenue-Critical'],
     thumbnail: 'thumb-amex-cover.webp',
+    metric: '80% adoption in year one · 80% reduction in support volume',
     images: ['amex-recon-01.png', 'amex-recon-02.png'],
     gifs: [],
     overview:
@@ -205,6 +210,7 @@ export const projects = [
       'Led ideation to bring an existing enterprise analytics product into its 2.0 phase — designing the Events feature that uses AI/ML to assess real-time impact of world events on spending trends, including a client demo prototype.',
     pills: ['AI/ML Product Design', 'Enterprise Analytics', 'Ideation Leadership', 'Client Demo', 'Data Visualization', 'Mobile'],
     thumbnail: 'thumb-mastercard.webp',
+    metric: '50–65% reduction in time-to-market across Mastercard Labs projects',
     images: ['mastercard-sp-01.jpg', 'mastercard-sp-02.jpg', 'mastercard-sp-03.jpg'],
     gifs: [],
     overview:
@@ -239,6 +245,7 @@ export const projects = [
       'MVP design for a data pipeline monitoring dashboard for Data Engineers and Architects — communicating critical pipeline health metrics with scenarios, visualizations, and detailed interaction specifications.',
     pills: ['Data Pipelines', 'ELT/ETL', 'Dashboard Design', 'User Interviews', 'AI-Assisted', 'Data Visualization'],
     thumbnail: 'thumb-dash-elt-cover.webp',
+    metric: 'MVP delivered from research to full interaction spec',
     images: ['elt-dashboard-01.png', 'elt-dashboard-02.png', 'elt-dashboard-03.png'],
     gifs: [],
     overview:

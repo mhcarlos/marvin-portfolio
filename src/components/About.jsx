@@ -20,7 +20,7 @@ const About = forwardRef(function About(_, ref) {
   return (
     <section ref={ref} id="about">
       <div className="section-rule flex items-baseline gap-4 mb-6">
-        <span className="text-xs tracking-widest uppercase text-neutral-700">About</span>
+        <span className="tracking-widest uppercase text-neutral-500" style={{ fontSize: '11px' }}>About</span>
       </div>
 
       <motion.div
@@ -65,7 +65,7 @@ const About = forwardRef(function About(_, ref) {
         <div className="flex flex-col gap-5">
           {skills.map(group => (
             <div key={group.label}>
-              <h4 className="text-xs tracking-widest uppercase text-neutral-700 mb-2">
+              <h4 className="tracking-widest uppercase text-neutral-500 mb-2" style={{ fontSize: '11px' }}>
                 {group.label}
               </h4>
               <div className="flex flex-wrap gap-1.5">

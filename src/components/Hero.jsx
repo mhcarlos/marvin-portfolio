@@ -10,7 +10,7 @@ export default function Hero({ onWork }) {
       animate="show"
       variants={{ show: { transition: { staggerChildren: 0.1 } } }}
     >
-      <motion.p variants={fade} className="tracking-widest uppercase text-neutral-400 mb-6" style={{ fontSize: '11px' }}>
+      <motion.p variants={fade} className="tracking-widest uppercase text-neutral-500 mb-6" style={{ fontSize: '11px' }}>
         Lead Product Designer · New York
       </motion.p>
 
@@ -24,8 +24,7 @@ export default function Hero({ onWork }) {
       </motion.h1>
 
       <motion.p variants={fade} className="text-base text-neutral-700 max-w-xl leading-relaxed font-light mb-8">
-        10+ years leading product design, design systems, and AI-driven features at Intuit,
-        Morgan Stanley, American Express, Mastercard, AOL, and Time Inc. CPACC-certified.
+        I've shipped AI features, design systems, and enterprise products used by millions — at Insight Partners, Intuit, Morgan Stanley, American Express, and Mastercard. 4× feature adoption. 7pt attrition reduction. MarCom Award winner. CPACC-certified.
       </motion.p>
 
       <motion.div variants={fade} className="flex flex-wrap gap-2">

@@ -49,8 +49,8 @@ export default function CaseStudy() {
         {/* Header */}
         <div className="mb-10">
           <div className="flex items-center gap-4 mb-4">
-            <span className="tracking-widest uppercase text-neutral-400" style={{ fontSize: '11px' }}>{project.client}</span>
-            <span className="text-neutral-400" style={{ fontSize: '11px' }}>{project.year}</span>
+            <span className="tracking-widest uppercase text-neutral-500" style={{ fontSize: '11px' }}>{project.client}</span>
+            <span className="text-neutral-500" style={{ fontSize: '11px' }}>{project.year}</span>
             <span
               className="text-xs px-2.5 py-0.5 rounded-full font-normal"
               style={{ background: 'var(--accent-light)', color: 'var(--accent)' }}
@@ -107,7 +107,7 @@ export default function CaseStudy() {
             {project.sections.map((section, i) => (
               <div key={i} className="grid grid-cols-[1fr_2fr] gap-12">
                 <div>
-                  <span className="tracking-widest uppercase text-neutral-400" style={{ fontSize: '11px' }}>
+                  <span className="tracking-widest uppercase text-neutral-500" style={{ fontSize: '11px' }}>
                     {String(i + 1).padStart(2, '0')}
                   </span>
                   <h3 className="font-display text-lg text-neutral-900 leading-snug mt-1">{section.title}</h3>

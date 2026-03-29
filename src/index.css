@@ -36,7 +36,7 @@
   }
   .nav-link {
     font-size: 11px;
-    @apply text-neutral-400 hover:text-neutral-900 tracking-widest uppercase transition-colors duration-200 cursor-pointer;
+    @apply text-neutral-600 hover:text-neutral-900 tracking-widest uppercase transition-colors duration-200 cursor-pointer;
   }
   .contact-link {
     @apply text-sm text-neutral-800 hover:text-neutral-900 border-b border-neutral-400 hover:border-neutral-900 pb-px transition-all duration-200 cursor-pointer;

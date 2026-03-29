@@ -31,26 +31,34 @@ export default function ProjectCard({ project }) {
             />
           ) : (
             <div
-              className="w-full h-full flex items-center justify-center"
+              className="w-full h-full flex flex-col items-center justify-center gap-2"
               style={{ background: 'var(--accent-light)' }}
             >
-              <span className="text-xs tracking-widest uppercase" style={{ color: 'var(--accent)' }}>
+              <span className="text-[11px] tracking-widest uppercase" style={{ color: 'var(--accent)' }}>
                 {project.client}
               </span>
+              <span className="text-[11px] text-neutral-400">Case study available on request</span>
             </div>
           )}
         </div>
 
         {/* Meta */}
         <div className="flex items-center gap-3 mb-1.5">
-          <span className="text-[11px] tracking-widest uppercase text-neutral-400">{project.client}</span>
-          <span className="text-[11px] text-neutral-400">{project.year}</span>
+          <span className="text-[11px] tracking-widest uppercase text-neutral-500">{project.client}</span>
+          <span className="text-[11px] text-neutral-500">{project.year}</span>
         </div>
 
         {/* Title */}
         <h2 className="font-display text-xl text-neutral-900 leading-snug group-hover:text-accent transition-colors duration-200">
           {project.title}
         </h2>
+
+        {/* Metric */}
+        {project.metric && (
+          <p className="text-xs font-normal mt-1" style={{ color: '#1A6B5C' }}>
+            {project.metric}
+          </p>
+        )}
       </Link>
     </motion.div>
   )
