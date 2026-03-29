@@ -27,7 +27,7 @@ const About = forwardRef(function About(_, ref) {
         className="grid grid-cols-2 gap-16 pb-4"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-60px' }}
+        viewport={{ once: true, amount: 0 }}
         transition={{ duration: 0.4 }}
       >
         {/* Bio */}

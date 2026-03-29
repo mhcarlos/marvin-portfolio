@@ -8,11 +8,12 @@ const Contact = forwardRef(function Contact(_, ref) {
         className="flex justify-between items-center py-10 border-t border-b border-neutral-200 mt-24"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: '-60px' }}
+        viewport={{ once: true, amount: 0 }}
         transition={{ duration: 0.4 }}
       >
         <p className="font-display text-2xl text-neutral-900 leading-snug">
-          <em className="not-italic" style={{ color: 'var(--accent)' }}>Let's work together.</em>
+          Let's build something great.<br/>
+          <em className="not-italic" style={{ color: 'var(--accent)' }}>Get in touch.</em>
         </p>
 
         <div className="flex gap-6 flex-shrink-0">

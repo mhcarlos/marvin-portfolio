@@ -10,9 +10,9 @@ const Work = forwardRef(function Work(_, ref) {
         <span className="text-neutral-500" style={{ fontSize: '11px' }}>{projects.length} projects</span>
       </div>
 
-      <div className="grid grid-cols-2 gap-x-10 gap-y-16 pb-4">
-        {projects.map(project => (
-          <ProjectCard key={project.id} project={project} />
+      <div className="flex flex-col gap-3 mt-6">
+        {projects.map((project, index) => (
+          <ProjectCard key={project.id} project={project} index={index} />
         ))}
       </div>
     </section>
