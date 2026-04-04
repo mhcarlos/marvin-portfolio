@@ -11,7 +11,7 @@ const Work = forwardRef(function Work(_, ref) {
       </div>
 
       <div className="flex flex-col pb-4">
-        {projects.map(project => (
+        {projects.filter(p => p.points?.length > 0).map(project => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>

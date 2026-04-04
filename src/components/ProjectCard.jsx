@@ -4,12 +4,11 @@ import { motion } from 'framer-motion'
 const ASSET_BASE = import.meta.env.BASE_URL + 'assets/'
 
 export function assetUrl(filename) {
-  const ext = filename.split('.').pop().toLowerCase()
-  const folder = ext === 'gif' ? 'gifs/' : 'images/'
-  return ASSET_BASE + folder + filename
+  return ASSET_BASE + 'images/' + filename
 }
 
 function thumbnail(project) {
+  if (project.thumbnail) return assetUrl(project.thumbnail)
   if (project.images?.length) return assetUrl(project.images[0])
   if (project.gifs?.length) return assetUrl(project.gifs[0])
   return null
