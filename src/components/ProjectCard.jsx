@@ -55,7 +55,7 @@ export default function ProjectCard({ project }) {
             <span className="text-sm tracking-widest uppercase text-neutral-600 dark:text-neutral-400">{project.client}</span>
             <span className="text-sm text-neutral-500 dark:text-neutral-500">{project.year}</span>
           </div>
-          <h2 className="font-display text-xl text-neutral-900 dark:text-neutral-100 leading-snug mb-2 group-hover:text-accent transition-colors duration-200">
+          <h2 className="font-display text-xl text-neutral-900 dark:text-neutral-100 leading-snug mb-2 group-hover:[color:var(--accent)] transition-colors duration-200">
             {project.title}
           </h2>
           <p className="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">

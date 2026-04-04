@@ -8,10 +8,10 @@ export default function Nav({ onWork, onAbout, onContact }) {
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       >
         <span
-          className="font-display text-2xl text-neutral-900 dark:text-neutral-100 select-none"
+          className="font-display text-base text-neutral-900 dark:text-neutral-100 select-none"
           style={{ letterSpacing: '-0.03em' }}
         >
-          MC
+          MARVIN CARLOS
         </span>
       </span>
       <div className="flex items-center gap-8">
