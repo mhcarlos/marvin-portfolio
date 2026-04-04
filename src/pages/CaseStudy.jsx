@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { projects } from '../data/projects'
 import { assetUrl } from '../components/ProjectCard'
+import DarkModeToggle from '../components/DarkModeToggle'
 
 export default function CaseStudy() {
   const { id } = useParams()
@@ -21,20 +22,17 @@ export default function CaseStudy() {
       {/* Nav */}
       <nav className="flex justify-between items-center py-8 border-b border-neutral-200 dark:border-neutral-800 mb-12">
         <Link to="/" className="cursor-pointer">
-          <img
-            src={`${import.meta.env.BASE_URL}assets/images/mc-logo.png`}
-            alt="Marvin Carlos"
-            style={{ height: '32px', width: 'auto' }}
-            onError={(e) => {
-              e.target.style.display = 'none'
-              e.target.nextSibling.style.display = 'inline'
-            }}
-          />
-          <span className="font-display text-xl text-neutral-900 dark:text-neutral-100 tracking-tight" style={{ display: 'none' }}>
-            Marvin Carlos
+          <span
+            className="font-display text-2xl text-neutral-900 dark:text-neutral-100 select-none"
+            style={{ letterSpacing: '-0.03em' }}
+          >
+            MC
           </span>
         </Link>
-        <Link to="/" className="nav-link">← Back to Work</Link>
+        <div className="flex items-center gap-8">
+          <Link to="/" className="nav-link">← Back</Link>
+          <DarkModeToggle />
+        </div>
       </nav>
 
       <motion.article
@@ -122,7 +120,7 @@ export default function CaseStudy() {
                 </div>
 
                 {/* Text left, image right */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
                   <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed font-light">
                     {point.text}
                   </p>
@@ -145,7 +143,7 @@ export default function CaseStudy() {
 
         {/* Footer nav */}
         <div className="border-t border-neutral-200 dark:border-neutral-800 pt-8 pb-16">
-          <Link to="/" className="contact-link">← Back to all work</Link>
+          <Link to="/" className="contact-link">← Back</Link>
         </div>
       </motion.article>
     </div>

@@ -16,7 +16,7 @@ export default function Hero({ onWork }) {
 
   return (
     <motion.section
-      className="pt-16 pb-4"
+      className="pt-16 pb-16"
       initial="hidden"
       animate="show"
       variants={{ show: { transition: { staggerChildren: 0.1 } } }}

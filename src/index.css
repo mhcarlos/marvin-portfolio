@@ -9,7 +9,8 @@
   }
 
   .dark {
-    --accent-light: rgba(26, 107, 92, 0.12);
+    --accent: #2DD4A0;
+    --accent-light: rgba(45, 212, 160, 0.12);
   }
 
   html {
