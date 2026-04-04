@@ -20,7 +20,7 @@ const About = forwardRef(function About(_, ref) {
   return (
     <section ref={ref} id="about">
       <div className="section-rule flex items-baseline gap-4 mb-6">
-        <span className="text-xs tracking-widest uppercase text-neutral-700">About</span>
+        <span className="text-xs tracking-widest uppercase text-neutral-700 dark:text-neutral-400">About</span>
       </div>
 
       <motion.div
@@ -31,10 +31,10 @@ const About = forwardRef(function About(_, ref) {
         transition={{ duration: 0.4 }}
       >
         {/* Bio */}
-        <div className="text-sm text-neutral-700 leading-relaxed font-light space-y-4">
+        <div className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed font-light space-y-4">
           <p>
             Designing experiences that blend{' '}
-            <strong className="text-neutral-900 font-medium">
+            <strong className="text-neutral-900 dark:text-neutral-100 font-medium">
               product, UX, design systems, AI, and technical precision
             </strong>
             — guided by a lifelong passion for visual storytelling.
@@ -42,21 +42,21 @@ const About = forwardRef(function About(_, ref) {
           <p>
             Across my career I've led and contributed to product design, UX, visual design,
             marketing and brand, design systems, and front-end development at{' '}
-            <strong className="text-neutral-900 font-medium">
+            <strong className="text-neutral-900 dark:text-neutral-100 font-medium">
               Insight Partners, Intuit, Morgan Stanley, American Express, Mastercard, AOL,
             </strong>{' '}
             and{' '}
-            <strong className="text-neutral-900 font-medium">Time Inc.</strong>
+            <strong className="text-neutral-900 dark:text-neutral-100 font-medium">Time Inc.</strong>
           </p>
           <p>
             I'm a{' '}
-            <strong className="text-neutral-900 font-medium">CPACC-certified</strong> accessibility
+            <strong className="text-neutral-900 dark:text-neutral-100 font-medium">CPACC-certified</strong> accessibility
             specialist. I bring both design and engineering fluency — able to prototype in code,
             speak to token architecture, and collaborate directly with developers without a handoff gap.
           </p>
           <p>
             I freelance through{' '}
-            <strong className="text-neutral-900 font-medium">Arklight LLC</strong>, based in
+            <strong className="text-neutral-900 dark:text-neutral-100 font-medium">Arklight LLC</strong>, based in
             New York / New Jersey.
           </p>
         </div>
@@ -65,7 +65,7 @@ const About = forwardRef(function About(_, ref) {
         <div className="flex flex-col gap-5">
           {skills.map(group => (
             <div key={group.label}>
-              <h4 className="text-xs tracking-widest uppercase text-neutral-700 mb-2">
+              <h4 className="text-xs tracking-widest uppercase text-neutral-700 dark:text-neutral-400 mb-2">
                 {group.label}
               </h4>
               <div className="flex flex-wrap gap-1.5">

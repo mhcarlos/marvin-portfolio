@@ -5,13 +5,13 @@ const Contact = forwardRef(function Contact(_, ref) {
   return (
     <section ref={ref} id="contact">
       <motion.div
-        className="flex justify-between items-center py-10 border-t border-b border-neutral-200 mt-24"
+        className="flex justify-between items-center py-10 border-t border-b border-neutral-200 dark:border-neutral-800 mt-24"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.4 }}
       >
-        <p className="font-display text-2xl text-neutral-900 leading-snug">
+        <p className="font-display text-2xl text-neutral-900 dark:text-neutral-100 leading-snug">
           <em className="not-italic" style={{ color: 'var(--accent)' }}>Let's work together.</em>
         </p>
 
