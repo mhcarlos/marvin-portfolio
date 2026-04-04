@@ -18,7 +18,7 @@ function HomePage() {
   }
 
   return (
-    <div className="max-w-5xl mx-auto px-10">
+    <div className="max-w-7xl mx-auto px-10">
       <Nav
         onWork={() => scrollTo(workRef)}
         onAbout={() => scrollTo(aboutRef)}

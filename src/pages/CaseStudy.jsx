@@ -16,13 +16,8 @@ export default function CaseStudy() {
     )
   }
 
-  const allImages = project.images || []
-  const allGifs = project.gifs || []
-  const heroSrc = allImages[0] ? assetUrl(allImages[0]) : allGifs[0] ? assetUrl(allGifs[0]) : null
-  const remainingImages = allImages.slice(1)
-
   return (
-    <div className="max-w-5xl mx-auto px-10">
+    <div className="max-w-7xl mx-auto px-10">
       {/* Nav */}
       <nav className="flex justify-between items-center py-8 border-b border-neutral-200 mb-12">
         <Link to="/" className="cursor-pointer">
@@ -77,19 +72,8 @@ export default function CaseStudy() {
           )}
         </div>
 
-        {/* Hero image */}
-        {heroSrc && (
-          <div className="w-full rounded-xl overflow-hidden mb-10 bg-neutral-100">
-            <img
-              src={heroSrc}
-              alt={project.title}
-              className="w-full h-auto object-cover"
-            />
-          </div>
-        )}
-
         {/* Overview + Outcomes */}
-        <div className="grid grid-cols-2 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-14 pb-14 border-b border-neutral-200">
           <div>
             <h3 className="text-xs tracking-widest uppercase text-neutral-700 mb-3">Overview</h3>
             <p className="text-sm text-neutral-700 leading-relaxed font-light">{project.overview}</p>
@@ -113,34 +97,48 @@ export default function CaseStudy() {
           )}
         </div>
 
-        {/* GIFs — full width */}
-        {allGifs.length > 0 && (
-          <div className="flex flex-col gap-6 mb-10">
-            {allGifs.map(filename => (
-              <div key={filename} className="w-full rounded-xl overflow-hidden bg-neutral-100">
-                <img
-                  src={assetUrl(filename)}
-                  alt={filename.replace(/[-_.]/g, ' ').replace(/\.[^.]+$/, '')}
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        )}
+        {/* Numbered discussion points */}
+        {project.points?.length > 0 && (
+          <div className="flex flex-col gap-14 mb-16">
+            {project.points.map((point, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.4 }}
+              >
+                {/* Number + Title — full width */}
+                <div className="flex items-baseline gap-3 mb-6">
+                  <span
+                    className="font-display text-2xl leading-none tabular-nums"
+                    style={{ color: 'var(--accent)' }}
+                  >
+                    {i + 1}.
+                  </span>
+                  <h2 className="font-display text-2xl text-neutral-900 leading-snug">
+                    {point.title}
+                  </h2>
+                </div>
 
-        {/* Remaining images — 2-column grid */}
-        {remainingImages.length > 0 && (
-          <div className="grid grid-cols-2 gap-4 mb-12">
-            {remainingImages.map(filename => (
-              <div key={filename} className="rounded-xl overflow-hidden bg-neutral-100">
-                <img
-                  src={assetUrl(filename)}
-                  alt={filename.replace(/[-_.]/g, ' ').replace(/\.[^.]+$/, '')}
-                  className="w-full h-auto object-cover"
-                  loading="lazy"
-                />
-              </div>
+                {/* Text left, image right */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+                  <p className="text-sm text-neutral-700 leading-relaxed font-light">
+                    {point.text}
+                  </p>
+
+                  {point.media && (
+                    <div className="rounded-xl overflow-hidden bg-neutral-100">
+                      <img
+                        src={assetUrl(point.media)}
+                        alt={point.title}
+                        className="w-full h-auto"
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
+                </div>
+              </motion.div>
             ))}
           </div>
         )}
