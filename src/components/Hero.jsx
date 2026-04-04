@@ -5,7 +5,7 @@ const fade = { hidden: { opacity: 0, y: 12 }, show: { opacity: 1, y: 0 } }
 export default function Hero({ onWork }) {
   return (
     <motion.section
-      className="py-24 pb-16"
+      className="pt-16 pb-4"
       initial="hidden"
       animate="show"
       variants={{ show: { transition: { staggerChildren: 0.1 } } }}

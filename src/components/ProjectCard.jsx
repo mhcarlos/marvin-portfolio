@@ -20,14 +20,17 @@ export default function ProjectCard({ project }) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 12 }}
+      initial={{ opacity: 0, y: 10 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-40px' }}
-      transition={{ duration: 0.4 }}
+      transition={{ duration: 0.35 }}
     >
-      <Link to={`/project/${project.id}`} className="block group">
+      <Link
+        to={`/project/${project.id}`}
+        className="flex gap-8 items-start py-8 border-b border-neutral-100 group"
+      >
         {/* Thumbnail */}
-        <div className="w-full aspect-[4/3] bg-neutral-100 rounded-lg overflow-hidden mb-4">
+        <div className="w-44 flex-shrink-0 aspect-[4/3] bg-neutral-100 rounded-lg overflow-hidden">
           {thumb ? (
             <img
               src={thumb}
@@ -47,16 +50,19 @@ export default function ProjectCard({ project }) {
           )}
         </div>
 
-        {/* Meta */}
-        <div className="flex items-center gap-3 mb-1.5">
-          <span className="text-xs tracking-widest uppercase text-neutral-700">{project.client}</span>
-          <span className="text-xs text-neutral-600">{project.year}</span>
+        {/* Content */}
+        <div className="flex-1 pt-1">
+          <div className="flex items-center gap-3 mb-2">
+            <span className="text-xs tracking-widest uppercase text-neutral-600">{project.client}</span>
+            <span className="text-xs text-neutral-500">{project.year}</span>
+          </div>
+          <h2 className="font-display text-xl text-neutral-900 leading-snug mb-2 group-hover:text-accent transition-colors duration-200">
+            {project.title}
+          </h2>
+          <p className="text-sm text-neutral-600 leading-relaxed font-light">
+            {project.description}
+          </p>
         </div>
-
-        {/* Title */}
-        <h2 className="font-display text-xl text-neutral-900 leading-snug group-hover:text-accent transition-colors duration-200">
-          {project.title}
-        </h2>
       </Link>
     </motion.div>
   )
