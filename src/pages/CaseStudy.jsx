@@ -22,11 +22,9 @@ export default function CaseStudy() {
       {/* Nav */}
       <nav className="flex justify-between items-center py-8 border-b border-neutral-200 dark:border-neutral-800 mb-12">
         <Link to="/" className="cursor-pointer">
-          <span
-            className="font-display text-base text-neutral-900 dark:text-neutral-100 select-none"
-            style={{ letterSpacing: '-0.03em' }}
-          >
-            MARVIN CARLOS
+          <span className="font-display text-neutral-900 dark:text-neutral-100 select-none" style={{ letterSpacing: '-0.03em' }}>
+            <span className="hidden md:inline text-xl">MARVIN CARLOS</span>
+            <span className="md:hidden text-lg">MC</span>
           </span>
         </Link>
         <div className="flex items-center gap-8">

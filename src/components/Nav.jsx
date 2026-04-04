@@ -7,11 +7,9 @@ export default function Nav({ onWork, onAbout, onContact }) {
         className="cursor-pointer"
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
       >
-        <span
-          className="font-display text-base text-neutral-900 dark:text-neutral-100 select-none"
-          style={{ letterSpacing: '-0.03em' }}
-        >
-          MARVIN CARLOS
+        <span className="font-display text-neutral-900 dark:text-neutral-100 select-none" style={{ letterSpacing: '-0.03em' }}>
+          <span className="hidden md:inline text-xl">MARVIN CARLOS</span>
+          <span className="md:hidden text-lg">MC</span>
         </span>
       </span>
       <div className="flex items-center gap-8">
