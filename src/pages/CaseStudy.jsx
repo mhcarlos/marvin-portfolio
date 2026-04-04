@@ -2,6 +2,7 @@ import { useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { projects } from '../data/projects'
 import { assetUrl } from '../components/ProjectCard'
+import DarkModeToggle from '../components/DarkModeToggle'
 
 export default function CaseStudy() {
   const { id } = useParams()
@@ -10,7 +11,7 @@ export default function CaseStudy() {
   if (!project) {
     return (
       <div className="max-w-4xl mx-auto px-8 py-24 text-center">
-        <p className="text-neutral-700 mb-4">Project not found.</p>
+        <p className="text-neutral-700 dark:text-neutral-300 mb-4">Project not found.</p>
         <Link to="/" className="contact-link">← Back to portfolio</Link>
       </div>
     )
@@ -19,22 +20,17 @@ export default function CaseStudy() {
   return (
     <div className="max-w-7xl mx-auto px-10">
       {/* Nav */}
-      <nav className="flex justify-between items-center py-8 border-b border-neutral-200 mb-12">
+      <nav className="flex justify-between items-center py-8 border-b border-neutral-200 dark:border-neutral-800 mb-12">
         <Link to="/" className="cursor-pointer">
-          <img
-            src={`${import.meta.env.BASE_URL}assets/images/mc-logo.png`}
-            alt="Marvin Carlos"
-            style={{ height: '32px', width: 'auto' }}
-            onError={(e) => {
-              e.target.style.display = 'none'
-              e.target.nextSibling.style.display = 'inline'
-            }}
-          />
-          <span className="font-display text-xl text-neutral-900 tracking-tight" style={{ display: 'none' }}>
-            Marvin Carlos
+          <span className="font-display text-neutral-900 dark:text-neutral-100 select-none" style={{ letterSpacing: '-0.03em' }}>
+            <span className="hidden md:inline text-xl">MARVIN CARLOS</span>
+            <span className="md:hidden text-lg">MC</span>
           </span>
         </Link>
-        <Link to="/" className="nav-link">← Back to Work</Link>
+        <div className="flex items-center gap-8">
+          <Link to="/" className="nav-link">← Back</Link>
+          <DarkModeToggle />
+        </div>
       </nav>
 
       <motion.article
@@ -45,8 +41,8 @@ export default function CaseStudy() {
         {/* Header */}
         <div className="mb-10">
           <div className="flex items-center gap-4 mb-4">
-            <span className="text-xs tracking-widest uppercase text-neutral-700">{project.client}</span>
-            <span className="text-xs text-neutral-600">{project.year}</span>
+            <span className="text-xs tracking-widest uppercase text-neutral-700 dark:text-neutral-400">{project.client}</span>
+            <span className="text-xs text-neutral-600 dark:text-neutral-500">{project.year}</span>
             <span
               className="text-xs px-2.5 py-0.5 rounded-full font-normal"
               style={{ background: 'var(--accent-light)', color: 'var(--accent)' }}
@@ -55,11 +51,11 @@ export default function CaseStudy() {
             </span>
           </div>
 
-          <h1 className="font-display text-4xl text-neutral-900 leading-tight mb-4">
+          <h1 className="font-display text-4xl text-neutral-900 dark:text-neutral-100 leading-tight mb-4">
             {project.title}
           </h1>
 
-          <p className="text-base text-neutral-700 leading-relaxed max-w-2xl font-light">
+          <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed max-w-2xl font-light">
             {project.description}
           </p>
 
@@ -73,14 +69,14 @@ export default function CaseStudy() {
         </div>
 
         {/* Overview + Outcomes */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-14 pb-14 border-b border-neutral-200">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-14 pb-14 border-b border-neutral-200 dark:border-neutral-800">
           <div>
-            <h3 className="text-xs tracking-widest uppercase text-neutral-700 mb-3">Overview</h3>
-            <p className="text-sm text-neutral-700 leading-relaxed font-light">{project.overview}</p>
+            <h3 className="text-xs tracking-widest uppercase text-neutral-700 dark:text-neutral-400 mb-3">Overview</h3>
+            <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed font-light">{project.overview}</p>
           </div>
           {project.outcomes?.length > 0 && (
             <div>
-              <h3 className="text-xs tracking-widest uppercase text-neutral-700 mb-3">
+              <h3 className="text-xs tracking-widest uppercase text-neutral-700 dark:text-neutral-400 mb-3">
                 {project.outcomeLabel || 'Outcomes'}
               </h3>
               <div className="flex flex-col gap-4">
@@ -89,7 +85,7 @@ export default function CaseStudy() {
                     <span className="font-display text-2xl leading-none" style={{ color: 'var(--accent)' }}>
                       {o.value}
                     </span>
-                    <span className="text-xs text-neutral-700 leading-snug">{o.label}</span>
+                    <span className="text-xs text-neutral-700 dark:text-neutral-400 leading-snug">{o.label}</span>
                   </div>
                 ))}
               </div>
@@ -116,19 +112,19 @@ export default function CaseStudy() {
                   >
                     {i + 1}.
                   </span>
-                  <h2 className="font-display text-2xl text-neutral-900 leading-snug">
+                  <h2 className="font-display text-2xl text-neutral-900 dark:text-neutral-100 leading-snug">
                     {point.title}
                   </h2>
                 </div>
 
                 {/* Text left, image right */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
-                  <p className="text-sm text-neutral-700 leading-relaxed font-light">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                  <p className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed font-light">
                     {point.text}
                   </p>
 
                   {point.media && (
-                    <div className="rounded-xl overflow-hidden bg-neutral-100">
+                    <div className="rounded-xl overflow-hidden bg-neutral-100 dark:bg-neutral-800">
                       <img
                         src={assetUrl(point.media)}
                         alt={point.title}
@@ -144,8 +140,8 @@ export default function CaseStudy() {
         )}
 
         {/* Footer nav */}
-        <div className="border-t border-neutral-200 pt-8 pb-16">
-          <Link to="/" className="contact-link">← Back to all work</Link>
+        <div className="border-t border-neutral-200 dark:border-neutral-800 pt-8 pb-16">
+          <Link to="/" className="contact-link">← Back</Link>
         </div>
       </motion.article>
     </div>

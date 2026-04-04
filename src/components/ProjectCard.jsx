@@ -26,10 +26,10 @@ export default function ProjectCard({ project }) {
     >
       <Link
         to={`/project/${project.id}`}
-        className="flex gap-8 items-start py-8 border-b border-neutral-100 group"
+        className="flex gap-8 items-start py-8 border-b border-neutral-100 dark:border-neutral-800 group"
       >
-        {/* Thumbnail */}
-        <div className="w-44 flex-shrink-0 aspect-[4/3] bg-neutral-100 rounded-lg overflow-hidden">
+        {/* Thumbnail — square crop */}
+        <div className="w-44 flex-shrink-0 aspect-square bg-neutral-100 dark:bg-neutral-800 rounded-lg overflow-hidden">
           {thumb ? (
             <img
               src={thumb}
@@ -52,13 +52,13 @@ export default function ProjectCard({ project }) {
         {/* Content */}
         <div className="flex-1 pt-1">
           <div className="flex items-center gap-3 mb-2">
-            <span className="text-xs tracking-widest uppercase text-neutral-600">{project.client}</span>
-            <span className="text-xs text-neutral-500">{project.year}</span>
+            <span className="text-sm tracking-widest uppercase text-neutral-600 dark:text-neutral-400">{project.client}</span>
+            <span className="text-sm text-neutral-500 dark:text-neutral-500">{project.year}</span>
           </div>
-          <h2 className="font-display text-xl text-neutral-900 leading-snug mb-2 group-hover:text-accent transition-colors duration-200">
+          <h2 className="font-display text-xl text-neutral-900 dark:text-neutral-100 leading-snug mb-2 group-hover:[color:var(--accent)] transition-colors duration-200">
             {project.title}
           </h2>
-          <p className="text-sm text-neutral-600 leading-relaxed font-light">
+          <p className="text-base text-neutral-600 dark:text-neutral-400 leading-relaxed font-light">
             {project.description}
           </p>
         </div>
