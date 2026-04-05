@@ -7,6 +7,7 @@ import About from './components/About'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import CaseStudy from './pages/CaseStudy'
+import ContactPage from './pages/ContactPage'
 
 function HomePage() {
   const workRef = useRef(null)
@@ -39,6 +40,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/project/:id" element={<CaseStudy />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </HashRouter>
   )

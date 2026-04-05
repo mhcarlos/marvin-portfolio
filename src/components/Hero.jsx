@@ -34,8 +34,9 @@ export default function Hero({ onWork }) {
       </motion.h1>
 
       <motion.p variants={fade} className="text-lg text-neutral-700 dark:text-neutral-300 max-w-xl leading-relaxed font-light mb-8">
-        10+ years leading product design, design systems, and AI-driven features at Intuit,
-        Morgan Stanley, American Express, Mastercard, AOL, and Time Inc. CPACC-certified.
+        17+ years shipping digital products — from front-end development to UX leadership to
+        AI-driven product design — at Insight Partners, Intuit, Morgan Stanley, American Express,
+        Mastercard, and more. CPACC-certified.
       </motion.p>
 
       <motion.div variants={fade} className="flex flex-wrap gap-2">

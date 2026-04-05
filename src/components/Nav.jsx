@@ -1,23 +1,65 @@
+import { useState } from 'react'
 import DarkModeToggle from './DarkModeToggle'
 
 export default function Nav({ onWork, onAbout, onContact }) {
+  const [menuOpen, setMenuOpen] = useState(false)
+
   return (
-    <nav className="flex justify-between items-center py-8 border-b border-neutral-200 dark:border-neutral-800">
-      <span
-        className="cursor-pointer"
-        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-      >
-        <span className="font-display text-neutral-900 dark:text-neutral-100 select-none" style={{ letterSpacing: '-0.03em' }}>
-          <span className="hidden md:inline text-xl">MARVIN CARLOS</span>
-          <span className="md:hidden text-lg">MC</span>
+    <nav className="border-b border-neutral-200 dark:border-neutral-800">
+      <div className="flex justify-between items-center py-8">
+        {/* Logo */}
+        <span
+          className="cursor-pointer"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        >
+          <span
+            className="font-display text-xl md:text-2xl text-neutral-900 dark:text-neutral-100 select-none"
+            style={{ letterSpacing: '-0.03em' }}
+          >
+            MARVIN CARLOS
+          </span>
         </span>
-      </span>
-      <div className="flex items-center gap-8">
-        <button onClick={onWork} className="nav-link">Work</button>
-        <button onClick={onAbout} className="nav-link">About</button>
-        <button onClick={onContact} className="nav-link">Contact</button>
-        <DarkModeToggle />
+
+        {/* Desktop nav */}
+        <div className="hidden md:flex items-center gap-8">
+          <button onClick={onWork} className="nav-link">Work</button>
+          <button onClick={onAbout} className="nav-link">About</button>
+          <button onClick={onContact} className="nav-link">Contact</button>
+          <DarkModeToggle />
+        </div>
+
+        {/* Mobile: dark mode toggle + hamburger */}
+        <div className="flex md:hidden items-center gap-4">
+          <DarkModeToggle />
+          <button
+            onClick={() => setMenuOpen(o => !o)}
+            className="text-neutral-700 dark:text-neutral-300 p-1"
+            aria-label="Toggle menu"
+          >
+            {menuOpen ? (
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                <line x1="4" y1="4" x2="18" y2="18" />
+                <line x1="18" y1="4" x2="4" y2="18" />
+              </svg>
+            ) : (
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                <line x1="3" y1="6" x2="19" y2="6" />
+                <line x1="3" y1="11" x2="19" y2="11" />
+                <line x1="3" y1="16" x2="19" y2="16" />
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
+
+      {/* Mobile dropdown */}
+      {menuOpen && (
+        <div className="md:hidden flex flex-col gap-4 pb-6">
+          <button onClick={() => { onWork(); setMenuOpen(false) }} className="nav-link text-left">Work</button>
+          <button onClick={() => { onAbout(); setMenuOpen(false) }} className="nav-link text-left">About</button>
+          <button onClick={() => { onContact(); setMenuOpen(false) }} className="nav-link text-left">Contact</button>
+        </div>
+      )}
     </nav>
   )
 }

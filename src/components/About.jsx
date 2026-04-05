@@ -24,7 +24,7 @@ const About = forwardRef(function About(_, ref) {
       </div>
 
       <motion.div
-        className="grid grid-cols-2 gap-16 pb-4"
+        className="grid grid-cols-1 md:grid-cols-2 gap-16 pb-4"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}

@@ -26,10 +26,10 @@ export default function ProjectCard({ project }) {
     >
       <Link
         to={`/project/${project.id}`}
-        className="flex gap-8 items-start py-8 border-b border-neutral-100 dark:border-neutral-800 group"
+        className="flex flex-col md:flex-row gap-6 md:gap-8 items-start py-8 border-b border-neutral-100 dark:border-neutral-800 group"
       >
         {/* Thumbnail — square crop */}
-        <div className="w-44 flex-shrink-0 aspect-square bg-neutral-100 dark:bg-neutral-800 rounded-lg overflow-hidden">
+        <div className="w-full md:w-44 flex-shrink-0 aspect-square bg-neutral-100 dark:bg-neutral-800 rounded-lg overflow-hidden">
           {thumb ? (
             <img
               src={thumb}

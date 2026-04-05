@@ -1,4 +1,5 @@
 import { forwardRef } from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 const Contact = forwardRef(function Contact(_, ref) {
@@ -16,9 +17,16 @@ const Contact = forwardRef(function Contact(_, ref) {
         </p>
 
         <div className="flex gap-6 flex-shrink-0">
-          <a href="mailto:hello@marvincarlos.com" className="contact-link">Email</a>
-          <a href="https://linkedin.com/in/marvincarlos" target="_blank" rel="noreferrer" className="contact-link">LinkedIn</a>
-          <a href="/resume.pdf" target="_blank" className="contact-link">Résumé</a>
+          <Link to="/contact" className="contact-link">Get in Touch</Link>
+          <a href="https://linkedin.com/in/marvincarlos" target="_blank" rel="noopener noreferrer" className="contact-link">LinkedIn</a>
+          <a
+            href={`${import.meta.env.BASE_URL}assets/Marvin-Carlos_Lead-Product-Designer.pdf`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-link"
+          >
+            Résumé
+          </a>
         </div>
       </motion.div>
     </section>
