@@ -4,5 +4,5 @@ import react from '@vitejs/plugin-react'
 // Change 'marvin-portfolio' to your actual GitHub repo name
 export default defineConfig({
   plugins: [react()],
-  base: '/marvin-portfolio/',  // matches GitHub repo name
+  base: '/',  // matches GitHub repo name
 })
