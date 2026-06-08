@@ -6,11 +6,15 @@
   :root {
     --accent: #1A6B5C;
     --accent-light: #E1F5EF;
+    --grad-cyan: #7dd4e8;
+    --grad-purple: #a78bd4;
   }
 
   .dark {
-    --accent: #2DD4A0;
-    --accent-light: rgba(45, 212, 160, 0.12);
+    --accent: #7dd4e8;
+    --accent-light: rgba(125, 212, 232, 0.10);
+    --grad-cyan: #7dd4e8;
+    --grad-purple: #a78bd4;
   }
 
   html {
@@ -23,9 +27,25 @@
   }
 
   .dark body {
-    background-color: #0f0f0f;
+    background-color: #0c0c0b;
     color: #e5e5e5;
   }
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, var(--grad-cyan), var(--grad-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero ambient glow */
+.hero-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse 80% 50% at 10% 40%, rgba(125,212,232,0.07) 0%, rgba(167,139,212,0.05) 50%, transparent 70%);
 }
 
 @layer components {
@@ -41,7 +61,7 @@
     @apply text-xs px-2.5 py-0.5 rounded-full bg-neutral-100 border border-neutral-200 text-neutral-800;
   }
   .section-rule {
-    @apply border-t border-neutral-200 pt-10 mt-24;
+    @apply border-t border-neutral-200 pt-12 mt-32;
   }
   .nav-link {
     @apply text-xs text-neutral-800 hover:text-neutral-900 tracking-widest uppercase transition-colors duration-200 cursor-pointer;
@@ -53,7 +73,9 @@
 
 /* Dark mode overrides for utility classes */
 .dark .tag {
-  @apply bg-neutral-800 border-neutral-700 text-neutral-200;
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.10);
+  @apply text-neutral-300;
 }
 .dark .pill {
   @apply bg-neutral-800 border-neutral-700 text-neutral-200;

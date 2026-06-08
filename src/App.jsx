@@ -26,7 +26,8 @@ function HomePage() {
         onContact={() => scrollTo(contactRef)}
       />
       <Hero onWork={() => scrollTo(workRef)} />
-      <Work ref={workRef} />
+      {/* Work section hidden temporarily while modernizing case studies */}
+      {/* <Work ref={workRef} /> */}
       <About ref={aboutRef} />
       <Contact ref={contactRef} />
       <Footer />

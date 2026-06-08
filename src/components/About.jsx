@@ -19,19 +19,19 @@ const skills = [
 const About = forwardRef(function About(_, ref) {
   return (
     <section ref={ref} id="about">
-      <div className="section-rule flex items-baseline gap-4 mb-6">
-        <span className="text-xs tracking-widest uppercase text-neutral-700 dark:text-neutral-400">About</span>
+      <div className="section-rule flex items-baseline gap-4 mb-12">
+        <span className="text-xs tracking-widest uppercase text-neutral-500 dark:text-neutral-500">About</span>
       </div>
 
       <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 gap-16 pb-4"
+        className="grid grid-cols-1 md:grid-cols-2 gap-20 pb-4"
         initial={{ opacity: 0, y: 10 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.4 }}
       >
         {/* Bio */}
-        <div className="text-base text-neutral-700 dark:text-neutral-300 leading-relaxed font-light space-y-4">
+        <div className="text-base text-neutral-600 dark:text-neutral-400 leading-loose font-light space-y-6">
           <p>
             Designing experiences that blend{' '}
             <strong className="text-neutral-900 dark:text-neutral-100 font-medium">
@@ -62,13 +62,13 @@ const About = forwardRef(function About(_, ref) {
         </div>
 
         {/* Skills */}
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-8">
           {skills.map(group => (
             <div key={group.label}>
-              <h4 className="text-xs tracking-widest uppercase text-neutral-700 dark:text-neutral-400 mb-2">
+              <h4 className="text-xs tracking-widest uppercase text-neutral-500 dark:text-neutral-500 mb-3">
                 {group.label}
               </h4>
-              <div className="flex flex-wrap gap-1.5">
+              <div className="flex flex-wrap gap-2">
                 {group.items.map(item => (
                   <span key={item} className="tag">{item}</span>
                 ))}

@@ -4,7 +4,15 @@
       "Bash(sudo chown:*)",
       "Bash(npm install:*)",
       "Bash(npm run:*)",
-      "Bash(gh auth:*)"
+      "Bash(gh auth:*)",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:5173)",
+      "mcp__Claude_Preview__preview_start",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "WebFetch(domain:arklighthq.com)",
+      "Bash(curl -sL https://arklighthq.com/)",
+      "Bash(grep -Ei 'accent-cyan|accent-purple|#[0-9a-fA-F]{3,6}|rgb|hsl')"
     ]
   }
 }
