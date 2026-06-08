@@ -18,10 +18,10 @@ export default function Hero({ onWork }) {
 
       <motion.h1
         variants={fade}
-        className="font-display max-w-4xl mb-8 gradient-text"
+        className="font-display max-w-4xl mb-8 text-neutral-900 dark:text-neutral-100"
         style={{ fontSize: 'clamp(3.5rem, 8vw, 6rem)', lineHeight: 1.05 }}
       >
-        Marvin Carlos
+        Thoughtful design for <span className="dark-gradient-text">complex problems.</span>
       </motion.h1>
 
       <motion.p variants={fade} className="text-lg text-neutral-600 dark:text-neutral-400 max-w-lg leading-relaxed font-light mb-12">
@@ -35,7 +35,6 @@ export default function Hero({ onWork }) {
         <span className="tag">Design Systems</span>
         <span className="tag">AI Product Design</span>
         <span className="tag">Accessibility · CPACC</span>
-        <span className="tag">Front-End Development</span>
       </motion.div>
     </motion.section>
   )

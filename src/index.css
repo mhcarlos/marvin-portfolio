@@ -6,8 +6,8 @@
   :root {
     --accent: #1A6B5C;
     --accent-light: #E1F5EF;
-    --grad-cyan: #7dd4e8;
-    --grad-purple: #a78bd4;
+    --grad-cyan: #0b6882;
+    --grad-purple: #6b3fa0;
   }
 
   .dark {
@@ -34,6 +34,17 @@
 
 /* Gradient text utility */
 .gradient-text {
+  background: linear-gradient(135deg, var(--grad-cyan), var(--grad-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Gradient span: invisible in light mode, gradient in dark */
+.dark-gradient-text {
+  color: inherit;
+}
+.dark .dark-gradient-text {
   background: linear-gradient(135deg, var(--grad-cyan), var(--grad-purple));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
