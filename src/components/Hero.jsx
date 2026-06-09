@@ -15,7 +15,7 @@ export default function Hero({ onWork }) {
       <motion.h1
         variants={fade}
         className="font-display max-w-4xl mb-6 text-neutral-900 dark:text-neutral-100"
-        style={{ fontSize: 'clamp(3rem, 7vw, 5.5rem)', lineHeight: 1.05 }}
+        style={{ fontSize: 'clamp(3rem, 7vw, 4.5rem)', lineHeight: 1.05 }}
       >
         All things being equal, the{' '}
         <span className="gradient-text">simplest</span>{' '}
@@ -24,7 +24,7 @@ export default function Hero({ onWork }) {
 
       <motion.p
         variants={fade}
-        className="text-sm tracking-widest text-neutral-400 dark:text-neutral-600 mb-12 font-light"
+        className="text-xl italic text-neutral-600 dark:text-neutral-400 mb-12 font-light"
       >
         —Occam's Razor
       </motion.p>
@@ -39,7 +39,7 @@ export default function Hero({ onWork }) {
         <span className="tag">Fintech</span>
         <span className="tag">Enterprise SaaS</span>
         <span className="tag">Design Systems</span>
-        <span className="tag">AI Product Design</span>
+        <span className="tag">Digital Marketing</span>
         <span className="tag">Accessibility · CPACC</span>
       </motion.div>
     </motion.section>
