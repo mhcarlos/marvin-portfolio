@@ -12,21 +12,27 @@ export default function Hero({ onWork }) {
     >
       <div className="hero-glow" />
 
-      <motion.p variants={fade} className="text-xs tracking-widest uppercase text-neutral-500 dark:text-neutral-500 mb-8">
-        Lead Product Designer · New York
-      </motion.p>
-
       <motion.h1
         variants={fade}
-        className="font-display max-w-4xl mb-8 text-neutral-900 dark:text-neutral-100"
-        style={{ fontSize: 'clamp(3.5rem, 8vw, 6rem)', lineHeight: 1.05 }}
+        className="font-display max-w-4xl mb-6 text-neutral-900 dark:text-neutral-100"
+        style={{ fontSize: 'clamp(3rem, 7vw, 5.5rem)', lineHeight: 1.05 }}
       >
-        Thoughtful design for <span className="dark-gradient-text">complex problems.</span>
+        All things being equal, the{' '}
+        <span className="gradient-text">simplest</span>{' '}
+        solution is the best.
       </motion.h1>
 
-      <motion.p variants={fade} className="text-lg text-neutral-600 dark:text-neutral-400 max-w-lg leading-relaxed font-light mb-12">
-        17+ years shipping digital products — from front-end development to UX leadership to
-        AI-driven product design. CPACC-certified.
+      <motion.p
+        variants={fade}
+        className="text-sm tracking-widest text-neutral-400 dark:text-neutral-600 mb-12 font-light"
+      >
+        —Occam's Razor
+      </motion.p>
+
+      <motion.p variants={fade} className="text-lg text-neutral-600 dark:text-neutral-400 max-w-xl leading-relaxed font-light mb-12">
+        Marvin Carlos is a product designer based in New York City. For over 17 years that idea has
+        shaped his work — turning complex, high-stakes software in finance, enterprise, and now AI
+        into products people actually want to use.
       </motion.p>
 
       <motion.div variants={fade} className="flex flex-wrap gap-2.5">

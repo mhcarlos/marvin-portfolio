@@ -7,10 +7,6 @@ const skills = [
     items: ['Product Design', 'UX Research', 'Design Systems', 'AI Product Design', 'Accessibility', 'Brand & Visual Design'],
   },
   {
-    label: 'Tools & Stack',
-    items: ['Figma', 'React', 'Tailwind CSS', 'ShadCN / Radix', 'TypeScript', 'Framer Motion', 'Claude Code', 'Tokens Studio'],
-  },
-  {
     label: 'Clients',
     items: ['Insight Partners', 'Intuit', 'Morgan Stanley', 'American Express', 'Mastercard', 'AOL', 'Time Inc.'],
   },
@@ -33,31 +29,13 @@ const About = forwardRef(function About(_, ref) {
         {/* Bio */}
         <div className="text-base text-neutral-600 dark:text-neutral-400 leading-loose font-light space-y-6">
           <p>
-            Designing experiences that blend{' '}
-            <strong className="text-neutral-900 dark:text-neutral-100 font-medium">
-              product, UX, design systems, AI, and technical precision
-            </strong>
-            — guided by a lifelong passion for visual storytelling.
+            I started in front-end development and grew into UX and design leadership, so I've spent
+            a long time on both sides of the handoff. The work I'm proudest of lives in hard places:
+            regulated finance, dense enterprise tools, and now AI products where the patterns are
+            still being written.
           </p>
           <p>
-            Across my career I've led and contributed to product design, UX, visual design,
-            marketing and brand, design systems, and front-end development at{' '}
-            <strong className="text-neutral-900 dark:text-neutral-100 font-medium">
-              Insight Partners, Intuit, Morgan Stanley, American Express, Mastercard, AOL,
-            </strong>{' '}
-            and{' '}
-            <strong className="text-neutral-900 dark:text-neutral-100 font-medium">Time Inc.</strong>
-          </p>
-          <p>
-            I'm a{' '}
-            <strong className="text-neutral-900 dark:text-neutral-100 font-medium">CPACC-certified</strong> accessibility
-            specialist. I bring both design and engineering fluency — able to prototype in code,
-            speak to token architecture, and collaborate directly with developers without a handoff gap.
-          </p>
-          <p>
-            I freelance through{' '}
-            <strong className="text-neutral-900 dark:text-neutral-100 font-medium">Arklight LLC</strong>, based in
-            New York / New Jersey.
+            Simplicity isn't a design tactic for me — it's how I try to think about most things.
           </p>
         </div>
 
