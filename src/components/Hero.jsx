@@ -2,7 +2,7 @@ import { motion } from 'framer-motion'
 
 const fade = { hidden: { opacity: 0, y: 12 }, show: { opacity: 1, y: 0 } }
 
-export default function Hero({ onWork }) {
+export default function Hero() {
   return (
     <motion.section
       className="relative pt-28 pb-28"
@@ -35,7 +35,7 @@ export default function Hero({ onWork }) {
         into products people actually want to use.
       </motion.p>
 
-      <motion.div variants={fade} className="flex flex-wrap gap-2.5">
+      <motion.div variants={fade} className="flex flex-wrap gap-1.5">
         <span className="tag">Fintech</span>
         <span className="tag">Enterprise SaaS</span>
         <span className="tag">Design Systems</span>

@@ -1,4 +1,5 @@
 import { forwardRef } from 'react'
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
 const skills = [
@@ -35,7 +36,8 @@ const About = forwardRef(function About(_, ref) {
             still being written.
           </p>
           <p>
-            Simplicity isn't a design tactic for me — it's how I try to think about most things.
+            You can drop me a note <Link to="/contact" className="contact-link">here</Link> or connect with me on{' '}
+            <a href="https://linkedin.com/in/marvincarlos" target="_blank" rel="noopener noreferrer" className="contact-link">LinkedIn</a>.
           </p>
         </div>
 

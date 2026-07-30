@@ -27,7 +27,7 @@ function MoonIcon() {
 export default function DarkModeToggle() {
   const [dark, setDark] = useState(() => {
     const saved = typeof window !== 'undefined' ? localStorage.getItem('theme') : null
-    const isDark = saved === 'light' ? false : true
+    const isDark = saved === 'dark'
     if (isDark && typeof document !== 'undefined') {
       document.documentElement.classList.add('dark')
     }

@@ -1,7 +1,8 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import DarkModeToggle from './DarkModeToggle'
 
-export default function Nav({ onWork, onAbout, onContact }) {
+export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
@@ -22,9 +23,8 @@ export default function Nav({ onWork, onAbout, onContact }) {
 
         {/* Desktop nav */}
         <div className="hidden md:flex items-center gap-8">
-          <button onClick={onWork} className="nav-link">Work</button>
-          <button onClick={onAbout} className="nav-link">About</button>
-          <button onClick={onContact} className="nav-link">Contact</button>
+          <Link to="/work" className="nav-link">Work</Link>
+          <Link to="/contact" className="nav-link">Contact</Link>
           <DarkModeToggle />
         </div>
 
@@ -55,9 +55,8 @@ export default function Nav({ onWork, onAbout, onContact }) {
       {/* Mobile dropdown */}
       {menuOpen && (
         <div className="md:hidden flex flex-col gap-4 pb-6">
-          <button onClick={() => { onWork(); setMenuOpen(false) }} className="nav-link text-left">Work</button>
-          <button onClick={() => { onAbout(); setMenuOpen(false) }} className="nav-link text-left">About</button>
-          <button onClick={() => { onContact(); setMenuOpen(false) }} className="nav-link text-left">Contact</button>
+          <Link to="/work" onClick={() => setMenuOpen(false)} className="nav-link text-left">Work</Link>
+          <Link to="/contact" onClick={() => setMenuOpen(false)} className="nav-link text-left">Contact</Link>
         </div>
       )}
     </nav>
